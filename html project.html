@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #back{
+        margin-top: 20px;
+        /* height:400px; */
+        width: 100%;
+      }
+      #karo{
+        /* width: 100px; */
+      }
+      .head{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            box-shadow: rgba(245, 34, 34, 0.24) 0px 3px 8px;
+        }
+        .name>img{
+             height: 75px;
+        }
+        #log{
+          border:1px solid red;
+          padding: 0px 5px 0px 5px;
+          border-radius: 10px;
+          height: 55px;
+          margin: auto;
+          
+          text-align: center;
+        }
+       #log>h3{
+        justify-content: center;
+          align-items: center;
+          
+       }
+        .other{
+            display: flex;
+            gap:45px
+        }
+       
+        .other>div:hover{
+           color:red;
+           border-bottom: 1px solid red;
+           cursor: pointer;
+        }
+      
+      #blogs-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 350px;
+        gap: 20px;
+        /* margin-top: 80px; */
+        width: 80%;
+        margin: auto;
+        /* margin-left: 15px;
+    margin-right: 15px; */
+      }
+      #blogs-container > div > img {
+        width: 100%;
+        height: 70%;
+      }
+      #blogs-container > div > img + p {
+        color: grey;
+        margin-bottom: 0px;
+      }
+      #blogs-container > div > p + p {
+        font-size: 22px;
+        margin-top: 10px;
+        margin-bottom: 4px;
+      }
+      #catagory-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 300px);
+        gap: 20px;
+        /* margin-left: 35px;
+        margin-right: 35px; */
+        margin-top: 20px;
+      }
+      #catagory-container > div {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      #catagory-container > div > img {
+        width: 100%;
+        height: 40%;
+        display: block;
+        margin: auto;
+      }
+      #catagory-container > div > h3 {
+        /* color:grey; */
+        text-align: center;
+        /* margin-bottom: 0px; */
+      }
+      #catagory-container > div > p {
+        color: grey;
+        text-align: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        /* margin-bottom: 0px; */
+      }
+
+      /* Medium screens */
+      @media all and (min-width: 451px) and (max-width: 750px) {
+        #blogs-container {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 320px);
+        }
+        #blogs-container > div > p + p {
+          font-size: 18px;
+        }
+        #catagory-container {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(3, 280px);
+        }
+      }
+
+      /* Small Screens */
+      @media all and (min-width: 100px) and (max-width: 450px) {
+        #blogs-container {
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(3, 320px);
+        }
+        #blogs-container > div > p + p {
+          font-size: 18px;
+        }
+        #catagory-container {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(4, 280px);
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+       
+      }
+      #hotn{
+        font-size: 12px;
+        color: rgb(3, 135, 135);
+        margin-top: 0px;
+       }
+    </style>
+  </head>
+
+  <body>
+    <div class="head">
+      <div class="name">
+        <img  src="https://static.fabhotels.com/icons/logo_blue_220px.png" alt="pic"/>
+      </div>
+      <div>
+        <input style="width:250px ;height:25px;" type="text" placeholder="Search Hotels"/>
+        <button style="height:30px;color:red;border: 1px solid red;background-color: white;">Search</button>
+      </div>
+      <div class="other">
+          <div><h3>Home</h3></div>
+          <div><h3>About</h3></div>
+          <div><h3>Type of house</h3></div>
+          <div><h3>Contact</h3></div>
+          
+          <div id="log"><h3>Log in</h3></div>
+      </div>
+  </div>
+    <div id="karo">
+      <img id="back" src="https://www.strategicgrounds.com/wp-content/uploads/2018/08/hotel_landscaping-1024x407.jpg" alt="ii"/>
+    </div>
+    <div>
+      <h1 style="text-align: center;color: grey;">Entire City Of Choice</h1>
+    </div>
+    <div id="blogs-container">
+      
+      <!-- All the Blogs will be here  -->
+      <div>
+        <!-- the images, date and the blog heading will be here  -->
+        <img
+          src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFzdGVyJTIwYmVkcm9vbXxlbnwwfHwwfHw%3D&w=1000&q=80"
+          alt="pic"
+        />
+        <p>$ 6000</p>
+        <p>Booking id : 987874</p>
+        <p id="hotn">Taj hotel</p>
+      </div>
+      <div>
+        <!-- the images, date and the blog heading will be here  -->
+        <img
+          src="https://www.thespruce.com/thmb/oIHoJlMagnxbjmRP_aFBi7bgbZI=/2048x1152/smart/filters:no_upscale()/contemporary-bedroom-design-ideas-350639-hero-9865f3b1c02b4f8d9a3c782b4e678676.jpg"
+          alt="pic"
+        />
+        <p>$ 8000</p>
+        <p>Booking id : 986574</p>
+        <p id="hotn">Russian</p>
+      </div>
+      <div>
+        <!-- the images, date and the blog heading will be here  -->
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Hotel-suite-bedroom.jpg"
+          alt="pic"
+        />
+        <p>$ 1200</p>
+        <p>Booking id : 981525</p>
+        <p id="hotn">Gilber era</p>
+      </div>
+    </div>
+    <div>
+      <h1 style="text-align: center;color: rgb(86, 82, 82);">Beach Vacations</h1>
+    </div>
+    <div id="catagory-container">
+      <!-- All the boxes for blog catagory goes here  -->
+      <div>
+        <!-- The image, h3 tag, p tag etc will be here  -->
+        <img
+          src="https://cdn1.goibibo.com/voy_ing/t_g/New_dWeb_Homepage_Goa-1580994111.jpg"
+          alt="pic"
+        />
+        <h3>Goa</h3>
+        <p>Far far away behind the mountain,far from the countries</p>
+      </div>
+      <div>
+        <!-- The image, h3 tag, p tag etc will be here  -->
+        <img
+          src="https://cdn1.goibibo.com/voy_ing/t_g/New_dWeb_Homepage_Maldives-1581454743.jpg"
+          alt="pic"
+        />
+        <h3>Maldives</h3>
+        <p>Far far away behind the mountain,far from the countries</p>
+      </div>
+      <div>
+        <!-- The image, h3 tag, p tag etc will be here  -->
+        <img
+          src="https://cdn1.goibibo.com/voy_ing/t_g/New_dWeb_Homepage_Langkawi-1581455255.jpg"
+          alt="pic"
+        />
+        <h3>Langkawi</h3>
+        <p>Far far away behind the mountain,far from the countries</p>
+      </div>
+      <div>
+        <!-- The image, h3 tag, p tag etc will be here  -->
+        <img
+          src="https://cdn1.goibibo.com/voy_ing/t_g/New_dWeb_Homepage_Krabi-1581455438.jpg"
+          alt="pic"
+        />
+        <h3>Krabi</h3>
+        <p>Far far away behind the mountain,far from the countries</p>
+      </div>
+      
+        <!-- The image, h3 tag, p tag etc will be here  -->
+        
+    </div>
+  </body>
+</html>
